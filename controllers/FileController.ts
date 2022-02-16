@@ -7,7 +7,7 @@ const fileController = () => {
             const file = await fileService().upload(req, res, next);
             return res.send({
                 file: file,
-                link: `http://${process.env.CLIENT_URL}/download/${file._id}`
+                link: `${process.env.CLIENT_URL}/download/${file._id}`
             })
         },
         getDownloadLink: async (req: Request, res: Response, next: NextFunction): Promise<Response> => {

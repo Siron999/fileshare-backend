@@ -36,7 +36,7 @@ const fileService = () => {
             }
             return res.send({
                 file,
-                link: `http://${process.env.BASE_URL}/file/download/${file.fileName}`
+                link: `${process.env.BASE_URL}/file/download/${file.fileName}`
             });
         },
         download: async (req: Request, res: Response, next: NextFunction): Promise<any> => {
