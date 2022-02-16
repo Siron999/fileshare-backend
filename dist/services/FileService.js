@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const File_1 = __importDefault(require("../models/File"));
 const multer_1 = __importDefault(require("multer"));
 const storage = multer_1.default.diskStorage({
-    destination: (req, file, callback) => callback(null, 'public/uploads'),
+    destination: (req, file, callback) => callback(null, 'dist/uploads'),
     filename(req, file, callback) {
         const uniqueName = `${Date.now()}-${Math.round(Math.random() * 1E9)}-${file.originalname}`;
         callback(null, uniqueName);
@@ -61,7 +61,7 @@ const fileService = () => {
             if (!file) {
                 next(new Error("File not found"));
             }
-            const filePath = `${__dirname}/../../public/uploads/${req.params.fName}`;
+            const filePath = `${__dirname}/../uploads/${req.params.fName}`;
             return res.download(filePath, file.originalFileName);
         }),
     };
