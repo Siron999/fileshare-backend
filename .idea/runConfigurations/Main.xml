@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="NodeJSConfigurationType" node-parameters="C:\Users\Siron\AppData\Roaming\npm\node_modules\nodemon\bin\nodemon.js" path-to-js-file="index.ts" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="DEBUG" value="fileshare:*" />
+    </envs>
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+      <browser url="http://localhost:4000/" />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>
