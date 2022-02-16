@@ -2,8 +2,11 @@
   "name": "fileshare",
   "version": "0.0.0",
   "private": true,
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node index.ts"
+    "build": "tsc",
+    "start": "tsc & node .",
+    "dev": "tsc -w & nodemon ."
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
