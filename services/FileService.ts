@@ -49,7 +49,7 @@ const fileService = () => {
             if (!file) {
                 next(new Error("File not found"));
             }
-            const filePath = `${__dirname}/../public/uploads/${req.params.fName}`
+            const filePath = `${__dirname}/../../public/uploads/${req.params.fName}`
             return res.download(filePath, file.originalFileName);
         },
     }
